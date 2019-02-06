@@ -12,6 +12,7 @@ class App extends Component {
       <Router>
         <div>
           <CustomNavbar />
+
           <Route exact path="/" Component={Home} />
           <Route path="/about" Component={About} />
           <Route path="/news" Component={News} />

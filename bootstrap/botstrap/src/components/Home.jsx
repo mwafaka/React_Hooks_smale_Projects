@@ -7,7 +7,7 @@ export default class Home extends Component {
     return (
       <Grid>
         <Jumbotron>
-          <h2>Welcome to Codelife.io</h2>
+          <h2>Welcome </h2>
           <p>This is how to build a website with React ,...</p>
         </Jumbotron>
         <Link to="/about" />
