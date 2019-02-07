@@ -4,6 +4,9 @@ import Navbar from "./components/layout/Navbar";
 
 import "./App.css";
 import Dashboard from "./components/dashbaord/Dashboard";
+import ProjectDetail from "./components/projects/ProjectDetail";
+import SignIn from "./components/auth/SignIn";
+import SignUp from "./components/auth/SignUP";
 
 class App extends Component {
   render() {
@@ -12,7 +15,10 @@ class App extends Component {
         <div className="App">
           <Navbar />
           <Switch>
-            <Route path="/" component={Dashboard} />
+            <Route exact path="/" component={Dashboard} />
+            <Route path="/project/:id" component={ProjectDetail} />
+            <Route path="/signin" component={SignIn} />
+            <Route path="/signup" component={SignUp} />
           </Switch>
         </div>
       </BrowserRouter>
