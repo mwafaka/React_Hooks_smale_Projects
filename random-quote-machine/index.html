@@ -1,12 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Randomm-Qoute-machin</title>
+    <script>
+        const QUOTEBANK=[ 
+            {
+                quote:"halllllo",
+                author:"me"
+            }, {
+                quote:"Godbeyyyy",
+                author:"not me"
+            },{ 
+                quote:"halllllo",
+                author:"you are not welcom"
+            }
+        ]
+        window.onload=init;
+        function init(){
+            generateQuote();
+
+        }
+        function generateQuote(){
+            let randomIndex=Math.floor(Math.random()*QUOTEBANK.length) 
+            let randomQuoteData=QUOTEBANK[randomIndex]
+            let link = 'https://twitter.com/intent/tweet/notmeapp?lang=en'
+            document.getElementById('text').innerText=randomQuoteData.quote;
+            document.getElementById('author').innerText=randomQuoteData.author;
+            document.getElementById('tweet-quote').href=link;
+        }
+    </script>
 </head>
 <body>
-<h1>k</h1>
-<h1>k</h1>
+<wrapper id='quote-box'>
+<div id="author"></div>
+<div id="text"></div>
+<button id="new-quote" onclick="generateQuote()">new-quote</button>
+<a href="#" id="tweet-quote" target="_balnk">Tweeter</a>
+
+
+</wrapper>
+<script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
 </body>
 </html>
