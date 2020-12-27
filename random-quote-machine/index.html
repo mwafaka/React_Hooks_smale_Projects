@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+    <head>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
     <title>Randomm-Qoute-machin</title>
     <script>
         const QUOTEBANK=[ 
@@ -28,17 +29,28 @@
             document.getElementById('author').innerText=randomQuoteData.author;
             document.getElementById('tweet-quote').href=link;
         }
+       
     </script>
 </head>
 <body>
-<wrapper id='quote-box'>
-<div id="author"></div>
-<div id="text"></div>
-<button id="new-quote" onclick="generateQuote()">new-quote</button>
-<a href="#" id="tweet-quote" target="_balnk">Tweeter</a>
+<div class="container">
+    <div class="card text-center bg-secondary" >
+        
+        <div class="card-body  ">
+            <div id='quote-box'>
+                <h5 class="card-title text-white" id="text"></h5>
+                <h3 class="card-text text-white" id="author"></h3>
+              
+                <button id="new-quote" class="btn btn-primary" onclick="generateQuote()" >new-quote</button>
+                <button  class="btn btn-danger"> <a href="#" id="tweet-quote" target="_balnk" >Tweeter</a></button>
+                
+            </div></div>
+                </div>
+        
+      </div>
+    </div>
 
-
-</wrapper>
 <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
 </body>
 </html>
