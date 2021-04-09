@@ -1,0 +1,31 @@
+body {
+  background-color: #636e72;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+.timer-container {
+  padding: 15px;
+  margin: 10px;
+  font-size: 20px;
+}
+
+button {
+  border: 1px solid;
+  color: white;
+  padding: 10px 15px;
+  margin: 10px;
+}
+
+.clock-container {
+  text-align: center;
+}
+
+.flex {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
