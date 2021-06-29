@@ -9,7 +9,7 @@ function Topbar({menuOpen,setMenuOpen}) {
                     <a href='#intro' className='logo'>Muafak Arbash</a>
                     <div className="itemContainer">
                         <Person className='icon' />
-                        <span>++491 7624777086</span>
+                        <span>+491 7624777086</span>
 
                     </div>
                     <div className="itemContainer">
