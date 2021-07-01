@@ -62,9 +62,11 @@ const[currentSlide,setCurrentSlide]=useState(0)
                     </div>
                 </div>
             ))}
-            </div>
-            <img src='assets/angle_Down.png' className='arrow left' alt='' onClick={()=>handleClick('left')}/>
-            <img src='assets/angle_Down.png ' className='arrow right' alt='' onClick={()=>handleClick()}/>
+            </div > 
+          
+            <img src='assets/angle_Down.png' className=' arrow left' alt='' onClick={()=>handleClick('left')}/>
+            <img src='assets/angle_Down.png ' className=' arrow right' alt='' onClick={()=>handleClick()}/>
+            
         </div>
     )
 }

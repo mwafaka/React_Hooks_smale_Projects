@@ -68,7 +68,7 @@ function Portfolio() {
                />
                ))}
             </ul>
-            <div className="container">
+          
                   <div className="container">
                 {data.map(d=>(
                 <div className="item">
@@ -76,7 +76,7 @@ function Portfolio() {
                     <h3>{d.title}</h3>
                 </div>
                 ))}
-            </div>            
+                     
             </div>
         </div>
     )
