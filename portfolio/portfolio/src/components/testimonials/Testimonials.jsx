@@ -31,7 +31,7 @@ function Testimonials() {
             <div className="container">
                 {data.map(d=>(
 
-                    <div className={d.featured? 'card featured':'card'}>
+                    <div key={d.id} className={d.featured? 'card featured':'card'}>
                     <div className="top">
                     <img className='left' src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRPdymelpWPhnkvGXlQADGOeiWmygxr2MqVQw&usqp=CAU' alt=""/>
                     <img  className='user' src={d.img}alt=""/>

@@ -3,6 +3,7 @@ import './Intro.scss'
 import { init } from 'ityped'
 import {useEffect,useRef} from 'react';
 
+
 function Intro() {
     const textRef=useRef();
 
@@ -29,7 +30,7 @@ function Intro() {
                     <h3>Freelance <span ref={textRef}></span> </h3>
                 </div>
             <a href='#portfolio'>
-           <img src='assets/angle_Down.png' alt=''/>
+           <img src='./assets/angle_Down.png' alt=''/>
             </a>
             </div>
             <div className="bubbles">

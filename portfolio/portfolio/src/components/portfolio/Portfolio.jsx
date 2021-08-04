@@ -55,23 +55,27 @@ function Portfolio() {
             default:
                 setData(featuredPortfolio)
         }
-    })
+    },[selected])
     return (
         <div className='portfolio' id='portfolio'>
             <h1>Portfolio</h1>
             <ul>
                {list.map((item)=>(
-               <PortfolioList title={item.title}
+               <PortfolioList
+               key={item.id} 
+               title={item.title}
                active={selected ===item.id}
                setSelected={setSelected}
                id={item.id}
+         
                />
+            
                ))}
             </ul>
           
                   <div className="container">
                 {data.map(d=>(
-                <div className="item">
+                <div className="item" key={d.id}>
                     <img src={d.img} alt=''/>
                     <h3>{d.title}</h3>
                 </div>

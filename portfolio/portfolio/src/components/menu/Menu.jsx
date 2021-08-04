@@ -8,13 +8,13 @@ function Menu({menuOpen,setMenuOpen}) {
                     <a href='#intro'>Home</a>
                 </li>
                 <li onClick={()=>setMenuOpen(false)}>
-                    <a href='#portfolio'>Portfolio</a>
+                    <a href='#portfolio'>Project</a>
                 </li>
                 <li onClick={()=>setMenuOpen(false)}>
-                    <a href='#work'>Works</a>
+                    <a href='#work'>Certificate && Achievment</a>
                 </li>
                 <li onClick={()=>setMenuOpen(false)}>
-                    <a href='#about-me'>About me</a>
+                    <a href='#about-me'>To Do</a>
                 </li>
                 <li onClick={()=>setMenuOpen(false)}>
                     <a href='#contact'>Contact</a>

@@ -11,7 +11,7 @@ const[message,setMessage]=useState(false)
     return (
         <div className='contact' id='contact'>
            <div className="left">
-               <img src='https://buchitech.com.ng/wp-content/uploads/2021/02/contactme.png'/>
+               <img src='https://buchitech.com.ng/wp-content/uploads/2021/02/contactme.png' alt=''/>
            </div>
            <div className="right">
                <h2>Contact me </h2>
