@@ -1,75 +1,82 @@
 import React, { useState } from "react";
+import { v4 as uuidv4 } from 'uuid';
 
 import "./App.css";
 
 function App() {
-  const [text, setText] = useState();
+  const [name, setName] = useState('');
   const [arrs, setArr] = useState([
     {
       name: "Coding 4 hours",
-      completed: false,
+      completed: true,
       id: 1
     },
     {
-      name: "Go to the Gym ",
+      name: "Coding 4 hours",
       completed: false,
       id: 2
     },
     {
-      name: "Make a dinner ",
+      name: "Coding 4 hours",
       completed: false,
       id: 3
     }
-  ]);
-  const getStyle = () => {
-    return {
-      background: "black",
-      padding: "10px",
-      borderBottom: "1px #ccc dotted",
-      textDecoration: arrs.completed ? "line-through" : "none"
-    };
-  };
 
+
+  ]);
   const handelChange = e => {
-    setText(e.target.value);
+    setName(e.target.value);
+
   };
   const handleSubmit = e => {
     e.preventDefault();
-    setArr([...arrs, text]);
-    setText("");
+    const newList = arrs.concat({ name, id: uuidv4(), completed: false });
+    console.log(newList);
+    setArr(newList);
+    setName('');
   };
   const deleteItem = index => {
     const newTodo = [...arrs];
     newTodo.splice(index, 1);
     setArr(newTodo);
   };
-  const markComplete = index => {
-    arrs.map(x => {
+  const markComplete = (index) => {
+    const newTodo = [...arrs];
+    newTodo.map((x) => {
       if (x.id == index) {
-        x.completed = !x.completed;
+        return x.completed !== x.completed
+       
       }
-      setArr(arrs);
-    });
+    }
+    )
+
+    setArr(newTodo);
+    console.log(newTodo);
+
+
   };
   return (
-    <div style={{ getStyle }}>
+    <div >
       <form onSubmit={handleSubmit}>
         <input
-          name="text"
-          value={text}
-          placeholder=" todo ..."
+          name="name"
+          value={name}
+          placeholder=" todo..."
           onChange={handelChange}
         ></input>
       </form>
 
       <ul>
         {arrs.map((item, index) => (
-          <p key={item.id}>
+          <p key={item.id} style={{ textDecoration: item.completed ? 'line-through' : 'none' }} >
             <input
+
               type="checkbox"
               onClick={() => {
                 markComplete(index);
+
               }}
+
             ></input>
             {item.name}
             <button
